@@ -26,12 +26,12 @@ jobs:
       - name: Configurar Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 20 # Corrigido de 'node-size' para 'node-version'
           cache: 'npm'
 
       - name: Instalar dependências e buildar
         run: |
-          npm ci
+          npm install # Mudamos de 'npm ci' para 'npm install' para evitar erros de trava de pacotes
           npm run build
 
       - name: Configurar Páginas
